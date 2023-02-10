@@ -11,7 +11,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <p>arara</p>
+        <p>マスク予報とは</p>
+        <p>ーーーーーーーー</p>
+        <p>都道府県を選択</p>
+        <p>ーーーーーーーーー</p>
+        <p>このサイトで出来ること</p>
+        <p>ーーーーーーーーーーーー</p>
       </main>
     </>
   )
