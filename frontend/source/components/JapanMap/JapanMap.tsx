@@ -10,7 +10,7 @@ const JapanMap = () => {
                 <div className={`${css.hokkaidotouhoku} ${css.clearfix}`}>
                     <p className={css.areatitle}>北海道・東北</p>
                     <div className={css.area}>
-                        <a href="#">
+                        <a href="pref/1">
                             <div className={css.hokkaido}>
                                 <p>北海道</p>
                             </div>
