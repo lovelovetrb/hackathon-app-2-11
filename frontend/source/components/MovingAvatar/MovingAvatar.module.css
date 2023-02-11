@@ -1,3 +1,9 @@
+.MovingAvatarPosition {
+    background-repeat: no-repeat;
+    background-image: url(/TV.png);
+    background-size: cover;
+}
+
 .imageFlex {
     display: flex;
 }

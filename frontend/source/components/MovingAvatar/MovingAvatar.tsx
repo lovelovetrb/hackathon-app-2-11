@@ -4,41 +4,41 @@ import { data } from "types"
 import Statusbar from "components/Statusbar/Statusbar"
 
 type props = {
-  data: data[]
+    data: data[]
 }
 
 const MovingAvatar = ({ data }: props) => {
-  const r = Math.floor((data[0].mask / (data[0].mask + data[0].nomask)) * 10);
-  const srcList: string[] = [];
-  for (let i = 1; i < r + 1; i++) {
-    console.log("i = " + i);
-    srcList.push(
-      "/MaskBuisinesMan.png"
-    );
-  }
-  for (let j = r + 1; j < 11; j++) {
-    srcList.push(
-      "/NoMaskMan.png"
-    );
-  }
-  return (
-    <>
-      <div className={css.imageFlex}>
-        {srcList.map((path: string, index: number) => {
-          return (
-            <Image
-              src={`${path}`}
-              className={`${css.keyframe2} ${css.animation} ${css.image}`}
-              alt="My avatar"
-              fill
-              key={index}
-            />
-          )
-        })}
-      </div>
-      <Statusbar ratio={r} />
-    </>
-  )
+    const r = Math.floor((data[0].mask / (data[0].mask + data[0].nomask)) * 10);
+    const srcList: string[] = [];
+    for (let i = 1; i < r + 1; i++) {
+        console.log("i = " + i);
+        srcList.push(
+            "/MaskBuisinesMan.png"
+        );
+    }
+    for (let j = r + 1; j < 11; j++) {
+        srcList.push(
+            "/NoMaskMan.png"
+        );
+    }
+    return (
+        <div className={css.MovingAvatarPosition}>
+            <div className={css.imageFlex}>
+                {srcList.map((path: string, index: number) => {
+                    return (
+                        <Image
+                            src={`${path}`}
+                            className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                            alt="My avatar"
+                            fill
+                            key={index}
+                        />
+                    )
+                })}
+            </div>
+            <Statusbar ratio={r} />
+        </div>
+    )
 }
 
 export default MovingAvatar
