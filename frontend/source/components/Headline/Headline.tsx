@@ -6,7 +6,7 @@ type Props = {
 
 const Headline = ({ subject }: Props) => {
   return (
-    <div className={}>
+    <div className={css.div}>
       <h1>{subject}</h1>
     </div>
   )
