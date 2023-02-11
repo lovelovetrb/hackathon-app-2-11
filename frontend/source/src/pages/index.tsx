@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import Headline from 'components/Headline/Headline'
+import JapanMap from 'components/JapanMap/JapanMap'
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <p>マスク予報とは</p>
         <p>ーーーーーーーー</p>
         <Headline subject='都道府県を選択' />
-        <p>都道府県を選択</p>
+        <JapanMap />
         <p>ーーーーーーーーー</p>
         <Headline subject='このサイトで出来ること' />
         <p>このサイトで出来ること</p>
