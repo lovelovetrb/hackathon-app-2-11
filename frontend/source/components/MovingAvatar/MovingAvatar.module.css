@@ -1,13 +1,13 @@
 .MovingAvatarPosition {
     background-repeat: no-repeat;
-    background-image: url(/TV.png);
+    background-image: url(/railFrame.png);
     background-size: cover;
 }
 
 .imageFlex {
     display: flex;
-    max-width:90%;
-    margin:0 auto;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .image {
