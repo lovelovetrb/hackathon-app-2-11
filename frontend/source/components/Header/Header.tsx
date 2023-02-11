@@ -13,7 +13,7 @@ const font_header = Shippori_Antique({
 const Header = () => {
   return (
     <>
-      <header className={`${css.header} ${font_header.className}`}>
+      <header className={`${css.header} `}>
         <div className={css.flex}>
 
           <Image
@@ -25,7 +25,7 @@ const Header = () => {
           />
           <h3 className={css.title}>
           <Link href="/">
-            マスク電鉄
+            マスク予報
             </Link>
           </h3>
           <Image
