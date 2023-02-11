@@ -3,11 +3,11 @@ import Image from 'next/image'
 import { data } from "types"
 
 type props = {
-  data : data[]
-  }
+    data: data[]
+}
 
-const MovingAvatar = ({data}:props) => {
-  const i = data
+const MovingAvatar = ({ data }: props) => {
+    const i = data
     return (
         <div className={css.imageFlex}>
             <Image
