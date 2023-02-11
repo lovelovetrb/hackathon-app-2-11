@@ -18,15 +18,18 @@ const Statusbar = ({ ratio }: props) => {
   return (
     <div className={css.barArea}>
       <div className={css.maskArea} style={maskStyle}>
-        <p>{`mask:${ratio_mask}`}</p>
-        <Image
-          src="/train_red.png"
-          className={`${css.image}`}
-          alt="red train"
-          fill
-        />
+        <div className={css.anime}>
+          <p>{`mask:${ratio_mask}`}</p>
+          <Image
+            src="/train_red.png"
+            className={`${css.image}`}
+            alt="red train"
+            fill
+          />
+        </div>
       </div>
       <div className={css.nomaskArea} style={nomaskStyle}>
+      <div className={css.anime}>
         <Image
           src="/train_blue.png"
           className={`${css.image}`}
@@ -34,6 +37,7 @@ const Statusbar = ({ ratio }: props) => {
           fill
         />
         <p>{`nomask:${ratio_nomask}`}</p>
+        </div>
       </div>
     </div>
   )
