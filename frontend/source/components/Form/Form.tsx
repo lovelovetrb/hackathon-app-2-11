@@ -6,7 +6,8 @@ import { prefList } from "types";
 
 
 const Form = () => {
-  const [file, setFile] = useState<File | null>(null)
+  const [file, setFile] = useState<any>(null)
+  const [resultImage,  setResultImage] = useState();
 
   const changeFileHandler = useCallback((evt: React.ChangeEvent<HTMLInputElement>) => {
     if (evt.currentTarget?.files && evt.currentTarget.files[0]) {
@@ -46,7 +47,8 @@ const Form = () => {
       data: submitData,
       headers: { "Content-Type": "multipart/form-data" }
     })
-      .then((res) => console.log(res))
+      .then((res) => setResultImage(res.data))
+      .catch((e) => alert("エラーが発生しました"))
     alert("OK")
   }
 
