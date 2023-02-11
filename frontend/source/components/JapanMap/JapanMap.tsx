@@ -56,12 +56,12 @@ const JapanMap = () => {
                                 <p>群馬</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/9">
                             <div className={css.tochigi}>
                                 <p>栃木</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/8">
                             <div className={css.ibaraki}>
                                 <p>茨城</p>
                             </div>
