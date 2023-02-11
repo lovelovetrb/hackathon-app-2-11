@@ -1,0 +1,58 @@
+.form{
+    width:90%;
+    margin: 0 auto;
+    padding:50px;
+    text-align: center;
+    position:relative;
+}
+
+.form img{
+  z-index:-3;
+}
+
+.Headline{
+  position:absolute;
+  background-color:white;
+  top:30px;
+  left:100px;
+  padding:0 10px;
+  font-size:30px;
+}
+
+.inputArea{
+  margin:0 auto;
+  border:  5px solid #827351;
+  padding:40px;
+  border-radius:10px;
+}
+
+.inputArea input{
+  margin: 0 auto;
+  text-align:center;
+  display: block
+}
+
+.fileInput {
+    border: 3px solid #FC0002;
+    padding: 100px;
+    position: relative;
+}
+.fileInput input[type="file"] {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.previewImage{
+  width:100%;
+}
+
+.submitButton{
+  margin-top:70px;
+  padding:10px 20px;
+    border: 3px solid #FC0002;
+
+}
