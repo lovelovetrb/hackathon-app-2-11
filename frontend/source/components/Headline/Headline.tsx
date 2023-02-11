@@ -8,7 +8,7 @@ type Props = {
 const Headline = ({ subject }: Props) => {
   return (
     <div className={css.div}>
-      <Image src="/peach.png" width={64} height={64} alt="peach???" />
+      <Image src="/peach.png" width={50} height={50} alt="My avatar" />
       <h1 className={css.h1}>{subject}</h1>
     </div>
   )
