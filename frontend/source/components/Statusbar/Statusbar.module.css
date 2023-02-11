@@ -1,8 +1,8 @@
 .barArea{
-  margin:50px auto 0;
   display:flex;
-  justify-content:center;
+  justify-content:space-between;
   max-width:90%;
+  margin:0 auto;
 }
 
 .image{
@@ -14,7 +14,6 @@
 
 .maskArea,
 .nomaskArea{
- display:flex;
   padding:10px;
 
 }
@@ -36,4 +35,36 @@
   width:100%;
   font-size:30px;
   text-align: center;
+}
+
+.anime{
+  display:flex;
+  animation-name: lefttoRightAnime;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-direction:normal;
+}
+
+@keyframes lefttoRightAnime {
+0%{
+  opacity:0;
+  width:0%;
+  }
+
+5%{
+  opacity:1;
+}
+
+100%{
+  width:100%;
+  }
+}
+
+@keyframes righttoLeftAnime {
+  from{
+    clip-path: inset(0 0 0 100%);
+  }
+  to{
+    clip-path: inset(0 0 0 0);
+  }
 }
