@@ -1,7 +1,9 @@
 .div {
     display: flex;
+    margin:20px 30px;
 }
 
 .h1 {
-    font-size: 60px;
+  margin-left:10px;
+    font-size: 45px;
 }

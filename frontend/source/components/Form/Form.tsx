@@ -1,7 +1,5 @@
 import css from "components/Form/Form.module.css"
 import { useCallback, useState, useEffect } from "react"
-import Image from "next/image"
-import { Warnes } from "@next/font/google"
 
 
 const Form = () => {
@@ -35,11 +33,13 @@ const Form = () => {
     };
   }, [file]);
 
-
+  const submithander = () => {
+   console.log(file)
+  }
 
   return (
-    <form className={css.form}>
-    <h3 className={css.Headline}>あなたのまわりのマスク状況を投稿！！</h3>
+    <form className={css.form} onSubmit={submithander}>
+      <h3 className={css.Headline}>あなたのまわりのマスク状況を投稿！！</h3>
       {/*<Image
         src="/railFrame.png"
         layout="fill"
@@ -48,10 +48,10 @@ const Form = () => {
       //
       />*/}
       <div className={css.inputArea}>
-       {file ? null : <div className={css.fileInput}>
-          あなたの　しゃしんを　あっぷろーど
+        {file ? null : <div className={css.fileInput}>
+          あなたの　まわりの　マスク状況は？
           <input type="file" accept="image/*" onChange={changeFileHandler} />
-        </div> }
+        </div>}
         {file ? (
           isLoading ? (
             <p>読み込み中</p>

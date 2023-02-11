@@ -41,7 +41,6 @@ console.log(data)
     <>
       <Headline subject={`${prefList[data[0]?.pref-1] ? prefList[data[0]?.pref-1].name : undefined} のページ`} />
       <MovingAvatar data={data} />
-      <Textarea text="これは　それっぽいフォントを　用いた　テキストエリアです" />
       <Form />
     </>
   )
