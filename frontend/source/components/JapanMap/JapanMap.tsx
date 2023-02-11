@@ -66,22 +66,22 @@ const JapanMap = () => {
                                 <p>茨城</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/11">
                             <div className={css.saitama}>
                                 <p>埼玉</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/12">
                             <div className={css.chiba}>
                                 <p>千葉</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/13">
                             <div className={css.tokyo}>
                                 <p>東京</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/14">
                             <div className={css.kanagawa}>
                                 <p>神奈川</p>
                             </div>
@@ -92,42 +92,42 @@ const JapanMap = () => {
                 <div className={`${css.tyubu} ${css.clearfix}`}>
                     <p className={css.areatitle}>中部</p>
                     <div className={css.area}>
-                        <a href="pref/">
+                        <a href="pref/15">
                             <div className={css.nigata}>
                                 <p>新潟</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/16">
                             <div className={css.toyama}>
                                 <p>富山</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/17">
                             <div className={css.ishikawa}>
                                 <p>石川</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/18">
                             <div className={css.fukui}>
                                 <p>福井</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/20">
                             <div className={css.nagano}>
                                 <p>長野</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/21">
                             <div className={css.gifu}>
                                 <p>岐阜</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/19">
                             <div className={css.yamanashi}>
                                 <p>山梨</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/23">
                             <div className={css.aichi}>
                                 <p>愛知</p>
                             </div>
