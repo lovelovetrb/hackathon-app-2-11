@@ -39,7 +39,17 @@ const Form = () => {
     const submitData = {
       image_file: file
     }
-    await axios.post("https://maskyohou.onrender.com/send-image", submitData)
+    await axios({
+      method: "POST",
+      url:"https://maskyohou.onrender.com/send-image",
+      data:submitData,
+      headers:{
+           "Content-Type":"multipart/form-data",
+           "Access-Control-Allow-Origin": "*",
+           "Access-Control-Allow-Headers": "Content-Type",
+           "Access-Control-Allow-Credentials":true
+        }
+      })
     .then((res) => console.log(res))
    alert("OK")
   }
@@ -66,7 +76,7 @@ const Form = () => {
               <select>
                 {prefList.map((item, index) => {
                   return (
-                    <option key={index}>{item.name}</option>
+                    <option key={index} >{item.name}</option>
                   )
                 })}
               </select>

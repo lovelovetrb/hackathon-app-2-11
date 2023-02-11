@@ -14,9 +14,6 @@ const Header = () => {
     <>
       <header className={`${css.header} ${font_header.className}`}>
         <div className={css.flex}>
-          <h3 className={css.title}>
-            マスク電鉄
-          </h3>
           <Image
             src="/saikoro_1.png"
             className={`${css.image}`}
@@ -24,6 +21,17 @@ const Header = () => {
             height={50}
             width={50}
           />
+          <h3 className={css.title}>
+            マスク電鉄
+          </h3>
+          <Image
+            src="/saikoro_2.png"
+            className={`${css.image}`}
+            alt="red train"
+            height={50}
+            width={50}
+          />
+
         </div>
       </header>
     </>
