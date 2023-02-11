@@ -1,6 +1,8 @@
 import axios from "axios";
 import css from "components/Form/Form.module.css"
+import { warn } from "console";
 import { useCallback, useState, useEffect } from "react"
+import { prefList } from "types";
 
 
 const Form = () => {
@@ -34,13 +36,13 @@ const Form = () => {
     };
   }, [file]);
 
-  const submithander = async() => {
+  const submithander = async () => {
     const submitData = {
-      image_file:file
-      }
+      image_file: file
+    }
     await axios.post("http://127.0.0.1:8080", submitData)
-
-   console.log(file)
+    .then((res) => console.log(res))
+   alert("OK")
   }
 
   return (
@@ -54,10 +56,26 @@ const Form = () => {
       //
       />*/}
       <div className={css.inputArea}>
-        {file ? null : <div className={css.fileInput}>
-          あなたの　まわりの　マスク状況は？
-          <input type="file" accept="image/*" onChange={changeFileHandler} />
-        </div>}
+        {file ? null :
+          <>
+            <div className={css.fileInput}>
+              あなたの　まわりの　マスク状況は？
+              <input type="file" accept="image/*" onChange={changeFileHandler} />
+
+            </div>
+            <div className={css.prefInput}>
+              <label>都道府県を選択：</label>
+              <select>
+                {prefList.map((item, index) => {
+                  return (
+                    <option>{item.name}</option>
+                  )
+                })}
+              </select>
+
+            </div>
+          </>
+        }
         {file ? (
           isLoading ? (
             <p>読み込み中</p>
