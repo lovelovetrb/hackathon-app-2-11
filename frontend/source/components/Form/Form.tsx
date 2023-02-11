@@ -39,13 +39,13 @@ const Form = () => {
     const submitData = {
       image_file: file
     }
-    await axios.post("https://maskyohou.onrender.com/", submitData)
+    await axios.post("https://maskyohou.onrender.com/send-image", submitData)
     .then((res) => console.log(res))
    alert("OK")
   }
 
   return (
-    <form className={css.form} onSubmit={submithander}>
+    <form className={css.form} >
       <h3 className={css.Headline}>あなたのまわりのマスク状況を投稿！！</h3>
       {/*<Image
         src="/railFrame.png"
@@ -60,7 +60,6 @@ const Form = () => {
             <div className={css.fileInput}>
               あなたの　まわりの　マスク状況は？
               <input type="file" accept="image/*" onChange={changeFileHandler} />
-
             </div>
             <div className={css.prefInput}>
               <label>都道府県を選択：</label>
@@ -71,7 +70,6 @@ const Form = () => {
                   )
                 })}
               </select>
-
             </div>
           </>
         }
@@ -82,8 +80,8 @@ const Form = () => {
             <img src={url} alt={file.name} className={css.previewImage} />
           )) : null}
 
-        <button className={css.submitButton}>送信</button>
       </div>
+        <input className={css.submitButton} onClick={submithander} value={"送信"}/>
     </form>
   )
 }
