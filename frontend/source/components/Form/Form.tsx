@@ -50,7 +50,7 @@ const Form = () => {
       method: "POST",
       url: "https://maskyohou.onrender.com/send-image",
       data: submitData,
-      headers: { "Content-Type": "multipart/form-data",  "Access-Control-Allow-Origin": "maskyohou.onrender.com" },
+      headers: { "Content-Type": "multipart/form-data",   },
     })
       .then((res) => {
         setResultImage(res.data)
