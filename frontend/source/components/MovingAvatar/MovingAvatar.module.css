@@ -1,0 +1,32 @@
+.imageFlex {
+    display: flex;
+}
+
+.image {
+    object-fit: contain;
+    position: relative !important;
+    width: 15% !important;
+    height: 100px !important;
+}
+
+.animation {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    width: 128px;
+}
+
+.keyframe2 {
+    animation-name: anim_h;
+}
+
+@keyframes anim_h {
+    0% {
+        transform: translate(0px, 0);
+    }
+
+    100% {
+        transform: translate(30px, 0);
+    }
+}

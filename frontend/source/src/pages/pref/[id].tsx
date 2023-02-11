@@ -11,6 +11,7 @@ export default function Home() {
     <>
       <Headline subject={`${id} のページ`} />
       <MovingAvatar />
+      <MovingAvatar />
       <Textarea text="これは　それっぽいフォントを　用いた　テキストエリアです" />
       <Form />
     </>

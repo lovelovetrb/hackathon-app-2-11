@@ -5,8 +5,37 @@ import Image from 'next/image'
 
 const MovingAvatar = () => {
     return (
-        <div className={css.div}>
-            <Image src="/peach.png" width={50} height={50} alt="My avatar" />
+        <div className={css.imageFlex}>
+            <Image
+                src="/NoMaskMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <Image
+                src="/MaskBuisinesMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <Image
+                src="/MaskBuisinesMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <Image
+                src="/MaskBuisinesMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <Image
+                src="/MaskBuisinesMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
         </div>
     )
 }
