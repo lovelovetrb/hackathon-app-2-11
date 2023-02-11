@@ -48,7 +48,7 @@ export const prefList = [{ "code": 1, "name": "北海道" },
 
 
 export type data = {
-  id: string;
+  id: number | null;
   timestamp: Date;
   mask: number;
   nomask: number;
