@@ -1,6 +1,5 @@
 import axios from "axios";
 import css from "components/Form/Form.module.css"
-import { warn } from "console";
 import { useCallback, useState, useEffect } from "react"
 import { prefList } from "types";
 
@@ -40,7 +39,7 @@ const Form = () => {
     const submitData = {
       image_file: file
     }
-    await axios.post("http://127.0.0.1:8080", submitData)
+    await axios.post("https://maskyohou.onrender.com/", submitData)
     .then((res) => console.log(res))
    alert("OK")
   }
