@@ -5,7 +5,7 @@ import Statusbar from "components/Statusbar/Statusbar"
 
 type props = {
     data: data[];
-    id: number;
+    id: string;
 }
 
 const MovingAvatar = ({ data, id }: props) => {
