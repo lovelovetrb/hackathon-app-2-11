@@ -1,5 +1,5 @@
 .MovingAvatarPosition {
-    background: no-repeat url("/hokkaido2.jpg");
+    /* background: no-repeat url("/1.jpg"); */
     background-size: 100% 100%;
     border: 10px solid black;
     padding: 400px 0 0 0;
@@ -15,14 +15,22 @@
     object-fit: contain;
     position: relative !important;
     width: 15% !important;
-    height: 100px !important;
+    height: 200px !important;
 }
 
-.animation {
+.imageFlex .animation:nth-child(even) {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 1.5s;
+    width: 128px;
+}
+
+.imageFlex .animation:nth-child(odd) {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1s;
     width: 128px;
 }
 
