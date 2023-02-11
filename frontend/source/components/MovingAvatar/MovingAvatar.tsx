@@ -1,4 +1,4 @@
-import css from "components/MovingAvatar/MovingAvatar.module.css"
+import css from "components/MovingAvatar/StyaleAvatar.module.css"
 import Image from 'next/image'
 
 
