@@ -1,6 +1,7 @@
 import Form from "components/Form/Form"
 import Headline from "components/Headline/Headline"
 import MovingAvatar from "components/MovingAvatar/MovingAvatar";
+import Loding from "components/Loding/Loding";
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
 import { data, prefList } from "types";
@@ -27,9 +28,8 @@ function Home() {
         .then((res) => res.json())
         .then((data) => setData(data))
         .then(() =>
-          setIsLoding(true)
+          setIsLoding(false)
         )
-      console.log("fetch")
     }
     if (router.isReady) {
       fetchData()
@@ -37,12 +37,10 @@ function Home() {
     }
   }, [query, router])
 
-  console.log(isLoding)
-  console.log(data)
   return (
     <>
       {isLoding ? (
-        <p>loding</p>
+       <Loding/>
       ) : (
         <>
           <Headline subject={`${prefList[data[0]?.pref - 1] ? prefList[data[0]?.pref - 1].name : undefined} のページ`} />
