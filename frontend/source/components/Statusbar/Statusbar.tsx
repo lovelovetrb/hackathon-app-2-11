@@ -18,7 +18,7 @@ const Statusbar = ({ ratio }: props) => {
   return (
     <div className={css.barArea}>
       <div className={css.maskArea} style={maskStyle}>
-        <div className={css.anime}>
+        <div className={css.lefttoRightAnime}>
           <p>{`mask:${ratio_mask}`}</p>
           <Image
             src="/train_red.png"

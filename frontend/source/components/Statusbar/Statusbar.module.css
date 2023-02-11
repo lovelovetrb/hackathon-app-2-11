@@ -2,6 +2,7 @@
   display:flex;
   justify-content:space-between;
   max-width:90%;
+  margin:0 auto;
 }
 
 .image{
@@ -38,13 +39,13 @@
 
 .anime{
   display:flex;
-  animation-name: fadeInAnime;/*1で解説*/
-  animation-fill-mode:forwards;/*2で解説*/
-  animation-duration:3s;/*3で解説*/
-  animation-direction:normal;/*7で解説*/
+  animation-name: lefttoRightAnime;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-direction:normal;
 }
 
-@keyframes fadeInAnime {
+@keyframes lefttoRightAnime {
 0%{
   opacity:0;
   width:0%;
@@ -56,5 +57,14 @@
 
 100%{
   width:100%;
+  }
+}
+
+@keyframes righttoLeftAnime {
+  from{
+    clip-path: inset(0 0 0 100%);
+  }
+  to{
+    clip-path: inset(0 0 0 0);
   }
 }

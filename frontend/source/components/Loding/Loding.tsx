@@ -4,7 +4,7 @@ import Image from "next/image"
 const Loding = () => {
   return (
     <div className={css.lodingArea}>
-      <p className={css.loding}>loding...</p>
+      <p className={css.loding}>loading...</p>
       <Image
         src="/train_red.png"
         className={`${css.image}`}
