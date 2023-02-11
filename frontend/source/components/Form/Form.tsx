@@ -7,6 +7,7 @@ import { prefList } from "types";
 const Form = () => {
   const [file, setFile] = useState<any>(null);
   const [resultImage, setResultImage] = useState();
+  const [pref, setPref] = useState<string>("1");
 
   const changeFileHandler = useCallback(
     (evt: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,7 +43,8 @@ const Form = () => {
   const submithander = async () => {
     const submitData = new FormData();
     submitData.append("image_file", file);
-
+    submitData.append("pref", pref);
+    console.log(pref)
     await axios({
       method: "POST",
       url: "https://maskyohou.onrender.com/send-image",
@@ -50,7 +52,7 @@ const Form = () => {
       headers: { "Content-Type": "multipart/form-data" },
     })
       .then((res) => setResultImage(res.data))
-      .catch((e) => alert("エラーが発生しました"));
+      .catch((e) => alert(`エラーが発生しました\n${e}`));
     alert("OK");
   };
 
@@ -67,7 +69,7 @@ const Form = () => {
       <div className={css.inputArea}>
         {file ? null : (
           <>
-            <Textarea text="ここに　写真を投稿することで　あなたの身の回りのマスク状況を　反映できます！" />
+            <Textarea text={`ここから　写真を投稿することで　あなたの身の回りのマスク状況を　AIが分析します！\nあなたの周りのマスク状況が　アプリ上に反映されます。`} />
             <div className={css.fileInput}>
               あなたの　まわりの　マスク状況は？
               <input
@@ -86,9 +88,9 @@ const Form = () => {
               <img src={url} alt={file.name} className={css.previewImage} />
               <div className={css.prefInput}>
                 <label>都道府県を選択：</label>
-                <select>
+                <select onChange={(e) => setPref(e.target.value)}>
                   {prefList.map((item, index) => {
-                    return <option key={index}>{item.name}</option>;
+                    return <option key={index} value={item.code}>{item.name}</option>;
                   })}
                 </select>
               </div>
