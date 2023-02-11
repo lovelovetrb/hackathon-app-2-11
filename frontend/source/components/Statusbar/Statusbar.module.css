@@ -1,0 +1,46 @@
+.barArea{
+  margin:50px auto 0;
+  display:flex;
+  justify-content:center;
+  max-width:90%;
+}
+
+.image{
+  object-fit: contain;
+    position: relative !important;
+    height: 100px !important;
+    width:auto !important;
+}
+
+.maskArea,
+.nomaskArea{
+ display:flex;
+  padding:10px;
+
+}
+
+.maskArea{
+}
+
+.maskArea p{
+  background-color:#FF3232;
+}
+
+.nomaskArea{
+  width:70%;
+}
+
+.nomaskArea p{
+  background-color:#7232FF;
+}
+
+
+.maskArea p,
+.nomaskArea p{
+  color:white;
+  margin:0 10px;
+  padding:30px 0;
+  width:100%;
+  font-size:30px;
+  text-align: center;
+}
