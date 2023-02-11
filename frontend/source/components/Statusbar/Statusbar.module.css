@@ -19,16 +19,8 @@
 
 }
 
-.maskArea{
-  width:30%;
-}
-
 .maskArea p{
   background-color:#FF3232;
-}
-
-.nomaskArea{
-  width:70%;
 }
 
 .nomaskArea p{

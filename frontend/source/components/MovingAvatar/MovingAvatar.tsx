@@ -36,7 +36,7 @@ const MovingAvatar = ({ data }: props) => {
           )
         })}
       </div>
-      <Statusbar />
+      <Statusbar ratio={r} />
     </>
   )
 }
