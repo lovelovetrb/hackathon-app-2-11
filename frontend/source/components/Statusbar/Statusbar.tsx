@@ -14,6 +14,7 @@ const Statusbar = ({ ratio }: props) => {
   const nomaskStyle = {
     width: ratio_nomask
   }
+
   return (
     <div className={css.barArea}>
       <div className={css.maskArea} style={maskStyle}>
@@ -32,7 +33,6 @@ const Statusbar = ({ ratio }: props) => {
           alt="red train"
           fill
         />
-
         <p>{`nomask:${ratio_nomask}`}</p>
       </div>
     </div>
