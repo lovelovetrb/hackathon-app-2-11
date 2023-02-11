@@ -26,13 +26,14 @@ const Statusbar = ({ ratio }: props) => {
         />
       </div>
       <div className={css.nomaskArea} style={nomaskStyle}>
-        <p>{`nomask:${ratio_nomask}`}</p>
         <Image
           src="/train_blue.png"
           className={`${css.image}`}
           alt="red train"
           fill
         />
+
+        <p>{`nomask:${ratio_nomask}`}</p>
       </div>
     </div>
   )
