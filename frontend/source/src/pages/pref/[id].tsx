@@ -4,20 +4,18 @@ import MovingAvatar from "components/MovingAvatar/MovingAvatar";
 import Textarea from "components/Textarea/Textarea"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
-import { prefList } from "types";
+import { data, prefList } from "types";
 
-
-type data = {
-  id: string;
-  timestamp: Date;
-  mask: number;
-  nomask: number;
-  pref: number;
-}
 
 function Home() {
-  const [data, setData] = useState<data>();
-  const [isLoding, setIsLoding] = useState<boolean>();
+  const [data, setData] = useState<data[]>([{
+      id:'',
+      timestamp:new Date(1999/1/1),
+      mask:1,
+      nomask:1,
+      pref:0,
+    }]);
+  const [isLoding, setIsLoding] = useState<boolean>(true);
   const router = useRouter();
   const query = router.query;
 
@@ -38,12 +36,11 @@ function Home() {
   if(isLoding){
   return <p>aaa</p>
     }
-
+console.log(data)
   return (
     <>
-      <Headline subject={`${prefList[data?.pref]} のページ`} />
-      <MovingAvatar />
-      <MovingAvatar />
+      <Headline subject={`${prefList[data[0]?.pref-1] ? prefList[data[0]?.pref-1].name : undefined} のページ`} />
+      <MovingAvatar data={data} />
       <Textarea text="これは　それっぽいフォントを　用いた　テキストエリアです" />
       <Form />
     </>

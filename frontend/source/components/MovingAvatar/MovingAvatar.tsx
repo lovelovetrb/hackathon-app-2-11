@@ -1,9 +1,13 @@
-import css from "components/MovingAvatar/StyaleAvatar.module.css"
+import css from "components/MovingAvatar/MovingAvatar.module.css"
 import Image from 'next/image'
+import { data } from "types"
 
+type props = {
+  data : data[]
+  }
 
-
-const MovingAvatar = () => {
+const MovingAvatar = ({data}:props) => {
+  const i = data
     return (
         <div className={css.imageFlex}>
             <Image

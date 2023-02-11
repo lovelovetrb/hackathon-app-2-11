@@ -45,3 +45,14 @@ export const prefList = [{ "code": 1, "name": "北海道" },
 { "code": 45, "name": "宮崎県" },
 { "code": 46, "name": "鹿児島県" },
 { "code": 47, "name": "沖縄県" }]
+
+
+export type data = {
+  id: string;
+  timestamp: Date;
+  mask: number;
+  nomask: number;
+  pref: number;
+}
+
+
