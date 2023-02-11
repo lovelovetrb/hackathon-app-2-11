@@ -39,13 +39,13 @@
 
 .anime{
   display:flex;
-  animation-name: lefttoRightAnime;
+  animation-name: fadeInAnime;
   animation-fill-mode:forwards;
   animation-duration:3s;
   animation-direction:normal;
 }
 
-@keyframes lefttoRightAnime {
+@keyframes fadeInAnime {
 0%{
   opacity:0;
   width:0%;
@@ -57,14 +57,5 @@
 
 100%{
   width:100%;
-  }
-}
-
-@keyframes righttoLeftAnime {
-  from{
-    clip-path: inset(0 0 0 100%);
-  }
-  to{
-    clip-path: inset(0 0 0 0);
   }
 }
