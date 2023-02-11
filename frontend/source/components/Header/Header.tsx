@@ -1,6 +1,7 @@
 import { Shippori_Antique, Yuji_Mai } from "@next/font/google"
 import css from "components/Header/Header.module.css"
 import Image from "next/image"
+import Link from "next/link"
 
 
 const font_header = Shippori_Antique({
@@ -14,6 +15,7 @@ const Header = () => {
     <>
       <header className={`${css.header} ${font_header.className}`}>
         <div className={css.flex}>
+
           <Image
             src="/saikoro_1.png"
             className={`${css.image}`}
@@ -22,7 +24,9 @@ const Header = () => {
             width={50}
           />
           <h3 className={css.title}>
+          <Link href="/">
             マスク電鉄
+            </Link>
           </h3>
           <Image
             src="/saikoro_2.png"

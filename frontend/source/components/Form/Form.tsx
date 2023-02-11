@@ -36,19 +36,14 @@ const Form = () => {
   }, [file]);
 
   const submithander = async () => {
-    const submitData = {
-      image_file: file
-    }
+    const submitData = new FormData();
+    submitData.append('image_file', file)
+
     await axios({
       method: "POST",
       url:"https://maskyohou.onrender.com/send-image",
       data:submitData,
-      headers:{
-           "Content-Type":"multipart/form-data",
-           "Access-Control-Allow-Origin": "*",
-           "Access-Control-Allow-Headers": "Content-Type",
-           "Access-Control-Allow-Credentials":true
-        }
+      headers:{"Content-Type":"multipart/form-data"}
       })
     .then((res) => console.log(res))
    alert("OK")
@@ -91,7 +86,7 @@ const Form = () => {
           )) : null}
 
       </div>
-        <input className={css.submitButton} onClick={submithander} value={"送信"}/>
+        <input className={css.submitButton} onClick={submithander} type="button" value={"送信"}/>
     </form>
   )
 }
