@@ -15,6 +15,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Headline subject='マスク予報とは' />
+<<<<<<< HEAD
         <Textarea text={`あなたの　撮影した写真から　AIがマスク着用率(ちゃくようりつ)を　判定します。\n下の日本地図から　各都道府県の　マスク着用の状況を　確認することができます！`} />
         <p></p>
         <p></p>
@@ -23,6 +24,13 @@ export default function Home() {
         <p></p>
         <Headline subject='このサイトで出来ること' />
         <Textarea text={`あなたの　撮影した写真から　AIがマスク着用率(ちゃくようりつ)を　判定します。\n下の日本地図から　各都道府県の　マスク着用の状況を　確認することができます！`} />
+=======
+        <Textarea text={`あなたの　撮影した写真から　AIがマスク着用率(ちゃくようりつ)を　判定します。\n下の日本地図から　各都道府県（かくとどうふけん）の　マスク着用の状況を　確認することができます！`}/>
+        <Headline subject='都道府県を選択' />
+        <JapanMap />
+        <Headline subject='このサイトで出来ること' />
+        <Textarea text={`aaa`}/>
+>>>>>>> 0b3e6b89e59aecae1c4e009be2c3736d62fe6ab9
       </main>
     </>
   )

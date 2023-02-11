@@ -1,5 +1,6 @@
 import axios from "axios";
 import css from "components/Form/Form.module.css"
+import Textarea from "components/Textarea/Textarea";
 import { useCallback, useState, useEffect } from "react"
 import { prefList } from "types";
 
@@ -41,12 +42,12 @@ const Form = () => {
 
     await axios({
       method: "POST",
-      url:"https://maskyohou.onrender.com/send-image",
-      data:submitData,
-      headers:{"Content-Type":"multipart/form-data"}
-      })
-    .then((res) => console.log(res))
-   alert("OK")
+      url: "https://maskyohou.onrender.com/send-image",
+      data: submitData,
+      headers: { "Content-Type": "multipart/form-data" }
+    })
+      .then((res) => console.log(res))
+    alert("OK")
   }
 
   return (
@@ -62,31 +63,35 @@ const Form = () => {
       <div className={css.inputArea}>
         {file ? null :
           <>
+                <Textarea text="aaa" />
             <div className={css.fileInput}>
               あなたの　まわりの　マスク状況は？
               <input type="file" accept="image/*" onChange={changeFileHandler} />
             </div>
-            <div className={css.prefInput}>
-              <label>都道府県を選択：</label>
-              <select>
-                {prefList.map((item, index) => {
-                  return (
-                    <option key={index} >{item.name}</option>
-                  )
-                })}
-              </select>
-            </div>
+
           </>
         }
         {file ? (
           isLoading ? (
             <p>読み込み中</p>
           ) : (
-            <img src={url} alt={file.name} className={css.previewImage} />
+            <>
+              <img src={url} alt={file.name} className={css.previewImage} />
+              <div className={css.prefInput}>
+                <label>都道府県を選択：</label>
+                <select>
+                  {prefList.map((item, index) => {
+                    return (
+                      <option key={index} >{item.name}</option>
+                    )
+                  })}
+                </select>
+              </div>
+            </>
           )) : null}
 
       </div>
-        <input className={css.submitButton} onClick={submithander} type="button" value={"送信"}/>
+      <input className={css.submitButton} onClick={submithander} type="button" value={"送信"} />
     </form>
   )
 }
