@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import Headline from 'components/Headline/Headline'
 import JapanMap from 'components/JapanMap/JapanMap'
+import Textarea from 'components/Textarea/Textarea'
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Headline subject='マスク予報とは' />
-        <p>マスク予報とは</p>
+        <Textarea text={`あなたの　撮影した写真から　AIがマスク着用率(ちゃくようりつ)を　判定します。\n下の日本地図から　各都道府県の　マスク着用の状況を　確認することができます！`}/>
+        <p></p>
         <p>ーーーーーーーー</p>
         <Headline subject='都道府県を選択' />
         <JapanMap />
