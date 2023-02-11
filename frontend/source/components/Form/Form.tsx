@@ -1,21 +1,23 @@
 import axios from "axios";
-import css from "components/Form/Form.module.css"
+import css from "components/Form/Form.module.css";
 import Textarea from "components/Textarea/Textarea";
-import { useCallback, useState, useEffect } from "react"
+import { useCallback, useState, useEffect } from "react";
 import { prefList } from "types";
 
-
 const Form = () => {
-  const [file, setFile] = useState<any>(null)
-  const [resultImage,  setResultImage] = useState();
+  const [file, setFile] = useState<any>(null);
+  const [resultImage, setResultImage] = useState();
 
-  const changeFileHandler = useCallback((evt: React.ChangeEvent<HTMLInputElement>) => {
-    if (evt.currentTarget?.files && evt.currentTarget.files[0]) {
-      setFile(evt.currentTarget.files[0]);
-    }
-  }, []);
+  const changeFileHandler = useCallback(
+    (evt: React.ChangeEvent<HTMLInputElement>) => {
+      if (evt.currentTarget?.files && evt.currentTarget.files[0]) {
+        setFile(evt.currentTarget.files[0]);
+      }
+    },
+    []
+  );
 
-  const [url, setUrl] = useState<string>('');
+  const [url, setUrl] = useState<string>("");
   const isLoading = file && !url;
 
   useEffect(() => {
@@ -26,7 +28,7 @@ const Form = () => {
     let reader: FileReader | null = new FileReader();
     reader.onloadend = () => {
       const res = reader!.result;
-      if (res && typeof res === 'string') {
+      if (res && typeof res === "string") {
         setUrl(res);
       }
     };
@@ -39,21 +41,21 @@ const Form = () => {
 
   const submithander = async () => {
     const submitData = new FormData();
-    submitData.append('image_file', file)
+    submitData.append("image_file", file);
 
     await axios({
       method: "POST",
       url: "https://maskyohou.onrender.com/send-image",
       data: submitData,
-      headers: { "Content-Type": "multipart/form-data" }
+      headers: { "Content-Type": "multipart/form-data" },
     })
       .then((res) => setResultImage(res.data))
-      .catch((e) => alert("エラーが発生しました"))
-    alert("OK")
-  }
+      .catch((e) => alert("エラーが発生しました"));
+    alert("OK");
+  };
 
   return (
-    <form className={css.form} >
+    <form className={css.form}>
       <h3 className={css.Headline}>あなたのまわりのマスク状況を投稿！！</h3>
       {/*<Image
         src="/railFrame.png"
@@ -63,16 +65,19 @@ const Form = () => {
       //
       />*/}
       <div className={css.inputArea}>
-        {file ? null :
+        {file ? null : (
           <>
             <Textarea text="ここに　写真を投稿することで　あなたの身の回りのマスク状況を　反映できます！" />
             <div className={css.fileInput}>
               あなたの　まわりの　マスク状況は？
-              <input type="file" accept="image/*" onChange={changeFileHandler} />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={changeFileHandler}
+              />
             </div>
-
           </>
-        }
+        )}
         {file ? (
           isLoading ? (
             <p>読み込み中</p>
@@ -83,19 +88,22 @@ const Form = () => {
                 <label>都道府県を選択：</label>
                 <select>
                   {prefList.map((item, index) => {
-                    return (
-                      <option key={index} >{item.name}</option>
-                    )
+                    return <option key={index}>{item.name}</option>;
                   })}
                 </select>
               </div>
             </>
-          )) : null}
-
+          )
+        ) : null}
       </div>
-      <input className={css.submitButton} onClick={submithander} type="button" value={"送信"} />
+      <input
+        className={css.submitButton}
+        onClick={submithander}
+        type="button"
+        value={"送信"}
+      />
     </form>
-  )
-}
+  );
+};
 
 export default Form;
