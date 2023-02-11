@@ -7,7 +7,18 @@ type props = {
 }
 
 const MovingAvatar = ({ data }: props) => {
-    const i = data
+    const r = Math.floor((data[0].mask / (data[0].mask + data[0].nomask)) * 10);
+    for (let i = 1; i < r + 1; i++) {
+        console.log("i = " + i);
+        <div className={css.imageFlex}>
+            <Image
+                src="/NoMaskMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+        </div>
+    }
     return (
         <div className={css.imageFlex}>
             <Image
@@ -40,6 +51,37 @@ const MovingAvatar = ({ data }: props) => {
                 alt="My avatar"
                 fill
             />
+            <Image
+                src="/NoMaskMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <Image
+                src="/NoMaskMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <Image
+                src="/NoMaskMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <Image
+                src="/NoMaskMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <Image
+                src="/NoMaskMan.png"
+                className={`${css.keyframe2} ${css.animation} ${css.image}`}
+                alt="My avatar"
+                fill
+            />
+            <p>{r}</p>
         </div>
     )
 }
