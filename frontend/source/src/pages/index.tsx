@@ -15,15 +15,11 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Headline subject='マスク予報とは' />
-        <Textarea text={`あなたの　撮影した写真から　AIがマスク着用率(ちゃくようりつ)を　判定します。\n下の日本地図から　各都道府県の　マスク着用の状況を　確認することができます！`}/>
-        <p></p>
-        <p>ーーーーーーーー</p>
+        <Textarea text={`あなたの　撮影した写真から　AIがマスク着用率(ちゃくようりつ)を　判定します。\n下の日本地図から　各都道府県（かくとどうふけん）の　マスク着用の状況を　確認することができます！`}/>
         <Headline subject='都道府県を選択' />
         <JapanMap />
-        <p>ーーーーーーーーー</p>
         <Headline subject='このサイトで出来ること' />
-        <p>このサイトで出来ること</p>
-        <p>ーーーーーーーーーーーー</p>
+        <Textarea text={`aaa`}/>
       </main>
     </>
   )

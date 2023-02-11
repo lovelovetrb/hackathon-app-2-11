@@ -28,7 +28,7 @@ const Statusbar = ({ ratio }: props) => {
           />
         </div>
       </div>
-      <div className={css.nomaskArea} >
+      <div className={css.nomaskArea} style={nomaskStyle}>
       <div className={css.anime}>
         <p>{`nomask:${ratio_nomask}`}</p>
         <Image
