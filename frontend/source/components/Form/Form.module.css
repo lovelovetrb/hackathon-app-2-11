@@ -34,10 +34,13 @@
 }
 
 .fileInput {
-    border: 3px solid #FC0002;
+    border: 3px dotted #FC0002;
+    border-radius:10px;
+    background-color: rgba(255, 0, 0, 0.05);
     padding: 100px;
     position: relative;
 }
+
 .fileInput input[type="file"] {
     height: 100%;
     left: 0;
