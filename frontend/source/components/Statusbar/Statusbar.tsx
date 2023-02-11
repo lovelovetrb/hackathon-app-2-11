@@ -2,16 +2,8 @@ import css from "components/Statusbar/Statusbar.module.css"
 import Image from "next/image"
 
 const Statusbar = () => {
-  const i = 30
   return (
     <div className={css.barArea}>
-      <style jsx>
-        {`
-          .maskArea{
-              width:${i}%;
-            }
-    `}
-      </style>
       <div className={css.maskArea}>
         <p>{`mask:`}</p>
         <Image
