@@ -35,12 +35,12 @@ const JapanMap = () => {
                                 <p>山形</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/4">
                             <div className={css.miyagi}>
                                 <p>宮城</p>
                             </div>
                         </a>
-                        <a href="pref/">
+                        <a href="pref/7">
                             <div className={css.fukushima}>
                                 <p>福島</p>
                             </div>
@@ -51,7 +51,7 @@ const JapanMap = () => {
                 <div className={css.kantou}>
                     <p className={css.areatitle}>関東</p>
                     <div className={css.area}>
-                        <a href="pref/">
+                        <a href="pref/10">
                             <div className={css.gunma}>
                                 <p>群馬</p>
                             </div>
