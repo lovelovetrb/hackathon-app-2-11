@@ -5,7 +5,7 @@ import { Kosugi_Maru } from "@next/font/google"
 
 const font = Kosugi_Maru({
   weight: "400",
-  subsets:["latin-ext"]
+  subsets:["latin"]
 })
 
 export default function App({ Component, pageProps }: AppProps) {
