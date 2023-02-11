@@ -63,9 +63,9 @@ const Form = () => {
       <div className={css.inputArea}>
         {file ? null :
           <>
+                <Textarea text="aaa" />
             <div className={css.fileInput}>
               あなたの　まわりの　マスク状況は？
-                <Textarea text="" />
               <input type="file" accept="image/*" onChange={changeFileHandler} />
             </div>
 
