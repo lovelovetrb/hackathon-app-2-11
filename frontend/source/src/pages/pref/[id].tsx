@@ -5,6 +5,7 @@ import Loding from "components/Loding/Loding";
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
 import { data, prefList } from "types";
+import Header from "components/Header/Header";
 
 
 function Home() {
@@ -40,9 +41,10 @@ function Home() {
   return (
     <>
       {isLoding ? (
-       <Loding/>
+        <Loding />
       ) : (
         <>
+          <Header />
           <Headline subject={`${prefList[data[0]?.pref - 1] ? prefList[data[0]?.pref - 1].name : undefined} のページ`} />
           <MovingAvatar data={data} />
           <Form />

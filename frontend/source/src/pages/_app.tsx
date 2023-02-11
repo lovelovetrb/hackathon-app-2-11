@@ -1,12 +1,17 @@
 import '@/styles/destyle.css'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Kosugi_Maru } from "@next/font/google"
+import { Kosugi_Maru, Yuji_Mai } from "@next/font/google"
 
 const font = Kosugi_Maru({
   weight: "400",
-  subsets:["latin-ext"]
+  subsets:["latin"]
 })
+
+const font_header = Yuji_Mai({
+weight: "400",
+subsets: ["latin"]
+  })
 
 export default function App({ Component, pageProps }: AppProps) {
 
