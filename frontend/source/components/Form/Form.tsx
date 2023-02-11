@@ -67,7 +67,7 @@ const Form = () => {
               <select>
                 {prefList.map((item, index) => {
                   return (
-                    <option>{item.name}</option>
+                    <option key={index}>{item.name}</option>
                   )
                 })}
               </select>
