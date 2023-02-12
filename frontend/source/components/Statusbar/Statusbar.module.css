@@ -59,3 +59,29 @@
   width:100%;
   }
 }
+
+
+@media screen and (max-width:600px){
+  .barArea{
+    flex-direction:column;
+    max-width:100%;
+}
+.anime{
+  align-items:center;
+}
+.maskArea p,
+.nomaskArea p{
+  color:white;
+  margin:0 10px;
+  padding:15px;
+  width:100%;
+  font-size:15px;
+  text-align: center;
+}
+.image{
+  object-fit: contain;
+    position: relative !important;
+    height: 55px !important;
+    width:auto !important;
+}
+}

@@ -1,5 +1,6 @@
 import axios from "axios";
 import css from "components/Form/Form.module.css";
+import Headline from "components/Headline/Headline";
 import Textarea from "components/Textarea/Textarea";
 import { useCallback, useState, useEffect } from "react";
 import { prefList } from "types";
@@ -51,26 +52,22 @@ const Form = () => {
       data: submitData,
       headers: { "Content-Type": "multipart/form-data" },
     })
-      .then((res) => setResultImage(res.data))
+      .then((res) => {
+        setResultImage(res.data)
+        alert("送信が完了しました");
+      }
+      )
       .catch((e) => alert(`エラーが発生しました\n${e}`));
-    alert("OK");
   };
 
   return (
     <>
       <form className={css.form}>
-        <h3 className={css.Headline}>あなたのまわりのマスク状況を投稿！！</h3>
-        {/*<Image
-        src="/railFrame.png"
-        layout="fill"
-        objectFit="cover"
-        alt=""
-      //
-      />*/}
+        <Headline subject="あなたのまわりのマスク状況を投稿！！" />
+        <Textarea text={`ここから　写真を投稿することで　あなたの身の回りのマスク状況を　AIが分析します！\nあなたの周りのマスク状況が　アプリ上に反映されます。`} />
         <div className={css.inputArea}>
           {file ? null : (
             <>
-              <Textarea text={`ここから　写真を投稿することで　あなたの身の回りのマスク状況を　AIが分析します！\nあなたの周りのマスク状況が　アプリ上に反映されます。`} />
               <div className={css.fileInput}>
                 あなたの　まわりの　マスク状況は？
                 <input

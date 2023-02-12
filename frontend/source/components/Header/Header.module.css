@@ -14,3 +14,14 @@
   -webkit-text-stroke: 1px #FFF;
   text-stroke: 1px #FFF;
 }
+
+@media screen and (max-width:600px){
+  .title{
+    font-size:20px;
+    text-align:center;
+  }
+
+  .flex{
+    justify-content:center;
+  }
+}

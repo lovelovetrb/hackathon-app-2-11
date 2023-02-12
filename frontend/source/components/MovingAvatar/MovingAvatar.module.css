@@ -1,5 +1,4 @@
 .MovingAvatarPosition {
-    /* background: no-repeat url("/1.jpg"); */
     background-size: 100% 100%;
     border: 10px solid black;
     padding: 400px 0 0 0;
@@ -46,4 +45,23 @@
     100% {
         transform: translate(30px, 0);
     }
+}
+
+@media screen and (max-width:600px){
+    .MovingAvatarPosition {
+      padding: 0;
+  }
+
+  .imageFlex{
+    flex-wrap:wrap;
+  }
+
+  .image {
+    object-fit: contain;
+    position: relative !important;
+    width: 20% !important;
+    height: 200px !important;
+}
+
+
 }
