@@ -30,7 +30,7 @@ function Home() {
         .then((res) => res.json())
         .then((data) => setData(data))
         .then(() =>
-          setIsLoding(true)
+          setIsLoding(false)
         )
     }
     if (router.isReady) {
