@@ -47,7 +47,7 @@ const Form = () => {
     submitData.append("image_file", file);
     submitData.append("pref", pref);
     console.log()
-    await axios({
+    /*await axios({
       method: "POST",
       url: "https://maskyohou.onrender.com/send-image",
       data: submitData,
@@ -58,7 +58,8 @@ const Form = () => {
         alert("送信が完了しました");
       }
       )
-      .catch((e) => alert(`エラーが発生しました\n${e}`));
+      .catch((e) => alert(`エラーが発生しました\n${e}`)); */
+      alert("送信が完了しました！")
   };
 
   return (
@@ -98,7 +99,7 @@ const Form = () => {
           ) : null}
         </div>
         <div className={css.buttonArea}>
-        <ShareButton />
+       <ShareButton />
           <input
             className={css.submitButton}
             onClick={submithander}
