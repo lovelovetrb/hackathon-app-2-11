@@ -6,7 +6,7 @@ import { prefList } from "types";
 
 const Form = () => {
   const [file, setFile] = useState<any>(null);
-  const [resultImage, setResultImage] = useState();
+  const [resultImage, setResultImage] = useState<any>(null);
   const [pref, setPref] = useState<string>("1");
 
   const changeFileHandler = useCallback(
@@ -43,7 +43,7 @@ const Form = () => {
   const submithander = async () => {
     const submitData = new FormData();
     submitData.append("image_file", file);
-    submitData.append("pref", pref);
+    /* submitData.append("pref", pref); */
     console.log(pref)
     await axios({
       method: "POST",
@@ -57,54 +57,57 @@ const Form = () => {
   };
 
   return (
-    <form className={css.form}>
-      <h3 className={css.Headline}>あなたのまわりのマスク状況を投稿！！</h3>
-      {/*<Image
+    <>
+      <form className={css.form}>
+        <h3 className={css.Headline}>あなたのまわりのマスク状況を投稿！！</h3>
+        {/*<Image
         src="/railFrame.png"
         layout="fill"
         objectFit="cover"
         alt=""
       //
       />*/}
-      <div className={css.inputArea}>
-        {file ? null : (
-          <>
-            <Textarea text={`ここから　写真を投稿することで　あなたの身の回りのマスク状況を　AIが分析します！\nあなたの周りのマスク状況が　アプリ上に反映されます。`} />
-            <div className={css.fileInput}>
-              あなたの　まわりの　マスク状況は？
-              <input
-                type="file"
-                accept="image/*"
-                onChange={changeFileHandler}
-              />
-            </div>
-          </>
-        )}
-        {file ? (
-          isLoading ? (
-            <p>読み込み中</p>
-          ) : (
+        <div className={css.inputArea}>
+          {file ? null : (
             <>
-              <img src={url} alt={file.name} className={css.previewImage} />
-              <div className={css.prefInput}>
-                <label>都道府県を選択：</label>
-                <select onChange={(e) => setPref(e.target.value)}>
-                  {prefList.map((item, index) => {
-                    return <option key={index} value={item.code}>{item.name}</option>;
-                  })}
-                </select>
+              <Textarea text={`ここから　写真を投稿することで　あなたの身の回りのマスク状況を　AIが分析します！\nあなたの周りのマスク状況が　アプリ上に反映されます。`} />
+              <div className={css.fileInput}>
+                あなたの　まわりの　マスク状況は？
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={changeFileHandler}
+                />
               </div>
             </>
-          )
-        ) : null}
-      </div>
-      <input
-        className={css.submitButton}
-        onClick={submithander}
-        type="button"
-        value={"送信"}
-      />
-    </form>
+          )}
+          {file ? (
+            isLoading ? (
+              <p>読み込み中</p>
+            ) : (
+              <>
+                <img src={url} alt={file.name} className={css.previewImage} />
+                <div className={css.prefInput}>
+                  <label>都道府県を選択：</label>
+                  <select onChange={(e) => setPref(e.target.value)}>
+                    {prefList.map((item, index) => {
+                      return <option key={index} value={item.code}>{item.name}</option>;
+                    })}
+                  </select>
+                </div>
+              </>
+            )
+          ) : null}
+        </div>
+        <input
+          className={css.submitButton}
+          onClick={submithander}
+          type="button"
+          value={"送信"}
+        />
+      </form>
+      {resultImage ? <img src={resultImage} /> : null}
+    </>
   );
 };
 
