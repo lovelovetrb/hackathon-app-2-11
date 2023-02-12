@@ -51,7 +51,7 @@ function Home() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <Header />
-          <Headline subject={`${prefList[data[0]?.pref - 1] ? prefList[data[0]?.pref - 1].name : undefined} のページ`} />
+          <Headline subject={`${prefList[data[0]?.pref - 1] ? prefList[data[0]?.pref - 1].name : undefined} に到着しました！`} />
           <MovingAvatar data={data} id={query ? query.id : undefined} />
           <Form />
         </>
