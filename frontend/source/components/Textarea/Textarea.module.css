@@ -10,6 +10,7 @@
 
 .main p{
   white-space: pre-wrap;
+  text-align:left;
   line-height:200%;
   font-size:20px;
 }
