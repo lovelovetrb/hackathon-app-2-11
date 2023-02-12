@@ -74,6 +74,12 @@
     font-size:25px;
 }
 
+.buttonArea{
+  display:flex;
+align-items: flex-end;
+    justify-content: center;
+}
+
 
 @media screen and (max-width:600px){
 
@@ -139,5 +145,11 @@
     font-size:15px;
 }
 
+.buttonArea{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+
+}
 
 }

@@ -1,5 +1,6 @@
 import Form from "components/Form/Form"
 import Head from 'next/head'
+import Link from "next/link";
 import Headline from "components/Headline/Headline"
 import MovingAvatar from "components/MovingAvatar/MovingAvatar";
 import Loding from "components/Loding/Loding";
@@ -7,6 +8,7 @@ import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
 import { data, prefList } from "types";
 import Header from "components/Header/Header";
+import ShareButton from "components/ShareButton/ShareButton";
 
 
 function Home() {

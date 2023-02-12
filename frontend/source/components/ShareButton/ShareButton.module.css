@@ -1,0 +1,27 @@
+.buttonArea{
+  margin-left:10px;
+}
+
+.button{
+  font-size: 25px;
+  padding:10px 20px;
+  display:block;
+  border:3px solid #7232ff;
+  border-radius:5px;
+  background-color:rgba(114, 50, 255, 0.1)
+}
+
+
+@media screen and (max-width:600px){
+.buttonArea{
+  margin-top:10px;
+}
+
+.button{
+  font-size: 15px;
+  padding:10px 20px;
+  display:block;
+  border:3px solid #7232ff;
+  border-radius:5px;
+}
+}

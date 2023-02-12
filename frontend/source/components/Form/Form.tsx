@@ -1,6 +1,7 @@
 import axios from "axios";
 import css from "components/Form/Form.module.css";
 import Headline from "components/Headline/Headline";
+import ShareButton from "components/ShareButton/ShareButton";
 import Textarea from "components/Textarea/Textarea";
 import { useCallback, useState, useEffect } from "react";
 import { prefList } from "types";
@@ -50,7 +51,7 @@ const Form = () => {
       method: "POST",
       url: "https://maskyohou.onrender.com/send-image",
       data: submitData,
-      headers: { "Content-Type": "multipart/form-data",   },
+      headers: { "Content-Type": "multipart/form-data", },
     })
       .then((res) => {
         setResultImage(res.data)
@@ -96,12 +97,14 @@ const Form = () => {
             )
           ) : null}
         </div>
-        <input
-          className={css.submitButton}
-          onClick={submithander}
-          type="button"
-          value={"送信"}
-        />
+        <div className={css.buttonArea}>
+          <input
+            className={css.submitButton}
+            onClick={submithander}
+            type="button"
+            value={"送信"}
+          /><ShareButton />
+        </div>
       </form>
       {resultImage ? <img src={resultImage} /> : null}
     </>
