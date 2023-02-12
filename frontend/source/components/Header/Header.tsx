@@ -25,7 +25,7 @@ const Header = () => {
           />
           <h3 className={css.title}>
           <Link href="/">
-            マスク予報
+            マジョリティ電鉄
             </Link>
           </h3>
           <Image
