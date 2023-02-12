@@ -98,12 +98,13 @@ const Form = () => {
           ) : null}
         </div>
         <div className={css.buttonArea}>
+        <ShareButton />
           <input
             className={css.submitButton}
             onClick={submithander}
             type="button"
             value={"送信"}
-          /><ShareButton />
+          />
         </div>
       </form>
       {resultImage ? <img src={resultImage} /> : null}
