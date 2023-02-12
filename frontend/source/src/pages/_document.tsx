@@ -4,6 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+      <meta name="description" content="個人の判断なら周りに合わせたいと思いがちですよね..." />
+      <meta property="og:title" content="マスク電鉄" />
+      <meta property="og:description" content="個人の判断なら周りに合わせたいと思いがちですよね..." />
+      <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:domain" content="https://hackathon-app-2-11.vercel.app/5.jpg" />
         <meta name="twitter:title" content="マスク電鉄" />
