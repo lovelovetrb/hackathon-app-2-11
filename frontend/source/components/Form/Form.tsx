@@ -44,7 +44,7 @@ const Form = () => {
   const submithander = async () => {
     const submitData = new FormData();
     submitData.append("image_file", file);
-    /* submitData.append("pref", pref); */
+    submitData.append("pref", pref);
     console.log(pref)
     await axios({
       method: "POST",
