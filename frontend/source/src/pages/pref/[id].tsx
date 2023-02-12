@@ -30,12 +30,11 @@ function Home() {
         .then((res) => res.json())
         .then((data) => setData(data))
         .then(() =>
-          setIsLoding(false)
+          setIsLoding(true)
         )
     }
     if (router.isReady) {
       fetchData()
-
     }
   }, [query, router])
 

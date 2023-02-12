@@ -1,7 +1,5 @@
 .header{
   padding:30px 10px;
-  border-bottom: 2px double #FF3232;
-
 }
 
 .flex{
@@ -11,8 +9,6 @@
 
 .title{
   font-size:30px;
-  -webkit-text-stroke: 1px #FFF;
-  text-stroke: 1px #FFF;
 }
 
 @media screen and (max-width:600px){
