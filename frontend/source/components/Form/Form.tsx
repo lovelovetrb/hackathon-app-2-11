@@ -45,12 +45,12 @@ const Form = () => {
     const submitData = new FormData();
     submitData.append("image_file", file);
     submitData.append("pref", pref);
-    console.log(pref)
+    console.log()
     await axios({
       method: "POST",
       url: "https://maskyohou.onrender.com/send-image",
       data: submitData,
-      headers: { "Content-Type": "multipart/form-data", "Access-Control-Allow-Origin": "*" },
+      headers: { "Content-Type": "multipart/form-data",  "Access-Control-Allow-Origin": "*" },
     })
       .then((res) => {
         setResultImage(res.data)
