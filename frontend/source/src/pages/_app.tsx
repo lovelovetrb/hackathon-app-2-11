@@ -8,10 +8,6 @@ const font = Kosugi_Maru({
   subsets:["latin"]
 })
 
-const font_header = Yuji_Mai({
-weight: "400",
-subsets: ["latin"]
-  })
 
 export default function App({ Component, pageProps }: AppProps) {
 
